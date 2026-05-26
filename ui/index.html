@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Cycles — Price Configurator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Hero Cycles</h1>
+        <p>Price Configurator</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+
+            <!-- Pricing Date -->
+            <div class="field-group">
+                <label for="pricing-date">Pricing Date</label>
+                <input type="date" id="pricing-date" value="2016-12-15" />
+                <span class="hint">Price changes took effect Dec 2016</span>
+            </div>
+
+            <!-- Frame -->
+            <div class="field-group">
+                <label for="frame">Frame</label>
+                <select id="frame">
+                    <option value="steel_frame">Steel Frame</option>
+                    <option value="aluminium_frame">Aluminium Frame</option>
+                </select>
+            </div>
+
+            <!-- Handle Bar & Brakes — user picks handlebar AND brake separately -->
+            <div class="field-group">
+                <label>Handle Bar &amp; Brakes</label>
+                <select id="handlebar">
+                    <option value="standard_handlebar">Standard Handlebar</option>
+                </select>
+                <select id="brakes" style="margin-top: 8px;">
+                    <option value="v_brakes">V-Brakes</option>
+                    <option value="disc_brakes">Disc Brakes</option>
+                </select>
+            </div>
+
+            <!-- Seating -->
+            <div class="field-group">
+                <label for="seating">Seating</label>
+                <select id="seating">
+                    <option value="basic_saddle">Basic Saddle</option>
+                    <option value="ergonomic_saddle">Ergonomic Saddle</option>
+                </select>
+            </div>
+
+            <!-- Wheels -->
+            <div class="field-group">
+                <label>Wheels</label>
+                <select id="rim">
+                    <option value="standard_rim">Standard Rim</option>
+                </select>
+                <select id="tyre" style="margin-top: 8px;">
+                    <option value="standard_tyre">Standard Tyre</option>
+                    <option value="tubeless_tyre">Tubeless Tyre</option>
+                </select>
+                <div class="checkbox-row" style="margin-top: 8px;">
+                    <input type="checkbox" id="include-tube" checked />
+                    <label for="include-tube">Include Tube</label>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="include-spokes" checked />
+                    <label for="include-spokes">Include Spokes</label>
+                </div>
+
+                <!-- Compatibility warning -->
+                <p id="tyre-warning" class="warning hidden">
+                    ⚠ Tubeless tyre selected — tube not required and will be excluded.
+                </p>
+            </div>
+
+            <!-- Chain Assembly -->
+            <div class="field-group">
+                <label for="chain">Chain Assembly</label>
+                <select id="chain">
+                    <option value="single_speed_chain">Single-Speed Chain</option>
+                    <option value="4_gear_assembly">4-Gear Assembly</option>
+                    <option value="7_gear_assembly">7-Gear Assembly</option>
+                </select>
+            </div>
+
+        </section>
+
+        <!-- Price Breakdown -->
+        <section class="result-section">
+            <h2>Price Breakdown</h2>
+            <table id="breakdown-table">
+                <tbody id="breakdown-body">
+                    <!-- filled by app.js -->
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td>Total</td>
+                        <td id="total-cell">₹0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p class="result-date">Prices as of <span id="result-date-label">—</span></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
