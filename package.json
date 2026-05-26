@@ -1,0 +1,30 @@
+{
+  "name": "hero-cycles-pricing-engine",
+  "version": "1.0.0",
+  "description": "Pricing engine for Hero Cycles configurable products",
+  "main": "src/cli/main.js",
+  "scripts": {
+    "start": "node src/cli/main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhosh1188/hero-cycles-pricing-engine.git"
+  },
+  "keywords": [
+    "pricing-engine",
+    "hero-cycles",
+    "nodejs",
+    "jest"
+  ],
+  "author": "Santhosh Kumar Penupotula",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/santhosh1188/hero-cycles-pricing-engine/issues"
+  },
+  "homepage": "https://github.com/santhosh1188/hero-cycles-pricing-engine#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
